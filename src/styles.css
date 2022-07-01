@@ -21,3 +21,52 @@
   .bgColorMenu2{
     background-color: #ff0000;
   }
+  
+  .bgColor{
+    background-color: #EBEBEB;
+  }
+
+  .bgColorCinza{
+    background-color:#D9D9D9;
+  }
+
+  /*-------CARD STYLE----------*/
+
+  .card-product{
+    width: 20rem;
+    padding: 10px 10px 0px 10px;
+    box-shadow: 0px 3px 3px rgb(134, 133, 133);
+    text-align: center;
+  }
+
+  .btn-comprar{
+    margin-top: 10px;
+    background-color: #000000;
+    color: white;
+    width: 270px;
+    height: 40px;
+    border-radius: 10px;
+    border: transparent;
+    font-weight: bold;
+    font-size: 16pt;
+  }
+
+  .btn-comprar
+
+  .card-texto{
+    font-size: 16pt;
+  }
+
+  .price-product-old{
+    font-size: 1.rem;
+    text-decoration: line-through;
+    color: rgb(255, 0, 0);
+  }
+
+  .price-product{
+    font-size: 1.3rem;
+    font-weight:bolder;
+    color: rgb(125, 133, 133);
+  }
+
+  /*---------------------*/
