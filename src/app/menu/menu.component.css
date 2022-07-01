@@ -22,20 +22,11 @@
   }
 
   .inputWidth{
-    min-width: 400px;
-    max-width: 400px;
+    width: 400px;
   }
   .boxMenu{
     flex-wrap: nowrap;
 
-  }
-
-  .bgColorMenu{
-    background-color: #000000;
-  }
-
-  .bgColorMenu2{
-    background-color: #ff0000;
   }
 
   .nav-item a{
@@ -45,3 +36,50 @@
   .nav-link{
     color: white;
   }
+
+  #carrinho{
+    color: #000000;
+    background-color: white;
+    border-radius: 50px;
+    width: 90px;
+    height: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16pt;
+    margin-top: 10px;
+  }
+
+.submit-lente {
+  position:absolute;
+  top: 0; 
+  right: 0;
+  z-index:10;
+  border:none;
+  background:transparent;
+  outline:none;
+  color: #000000;
+}
+
+.submit-line {
+  position: relative;
+  max-width: 350px;
+  width: 300px;
+  margin-top: 10px
+}
+
+.submit-line input {
+  width: 100%;
+}
+
+.tm-icon{
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+.font-weight{
+  font-weight: bold;
+}
+
+.dropdown-content a{
+  color: #000000;
+}

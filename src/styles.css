@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+.fs-14{
+    font-size: 14pt;
+}
+.fs-16{
+    font-size: 16pt;
+}
+.fs-18{
+    font-size: 18pt;
+}
+
+.border-r-50{
+    border-radius: 50px;
+}
+
+
+.bgColorMenu{
+    background-color: #000000;
+  }
+
+  .bgColorMenu2{
+    background-color: #ff0000;
+  }
