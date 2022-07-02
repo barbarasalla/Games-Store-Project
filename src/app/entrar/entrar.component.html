@@ -1,0 +1,20 @@
+<div class="container-fluid bgEntrar">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-3 box-entrar">
+            <h2 class="text-center pb-3">ACESSE SUA CONTA</h2>
+            <form class="forms">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email</label>
+                  <input [(ngModel)]="userLogin.userName" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input [(ngModel)]="userLogin.passWord" type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <button type="submit" class="btn btn-entrar py-1" (click)="entrar()">Entrar</button>
+                <p class="criarConta">Não possui uma conta? <a routerLink="/cadastrar">Criar Conta</a>.</p>
+              </form>
+        </div>
+    </div>
+</div>
