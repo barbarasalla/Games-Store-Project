@@ -1,4 +1,4 @@
-import { Product } from "./product";
+import { Product } from "./Product";
 
 export class Category{
     public id: number;
