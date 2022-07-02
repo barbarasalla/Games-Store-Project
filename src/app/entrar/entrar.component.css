@@ -1,0 +1,71 @@
+.box-entrar{
+    padding: 30px 70px 30px 70px;
+    background-color: transparent;
+    color: white;
+    background-color: rgb(32, 32, 32);
+    margin: 50px 50px 50px 50px;
+    width: 550px;
+    border-radius: 30px;
+    box-shadow: 1px 2px 2px 2px rgb(0, 0, 0);
+    letter-spacing: 1.2px;
+    font-size: 18px;
+}
+
+.bgEntrar{
+    background: linear-gradient(-45deg, #363636, #272626, #3a3838);
+    background-size: 400% 400%;
+    animation: backgroundTransition 7s ease-in-out infinite;
+}
+
+@keyframes backgroundTransition {
+    0%{
+        background-position: 0% 80%;
+    }    
+    50%{
+        background-position: 80% 100%;
+    }
+    100%{
+        background-position: 0% 90%;
+    }
+}
+
+.btn-entrar{
+    margin-top: 40px;
+    display: block;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    background-color: rgb(85, 82, 82);
+    color: white;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 2px rgb(26, 25, 25);
+    font-size: 14pt;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.btn-entrar:hover{
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
+.criarConta{
+    font-size: 20px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.criarConta a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.3px;    
+}
+
+.criarConta a:hover{
+    color: #cac3c3;
+}
+
+.forms input{
+    border-radius: 20px;
+}
