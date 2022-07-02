@@ -1,7 +1,6 @@
-import { Category } from "./category";
+import { Category } from "./Category";
 
 export class Product{
-
     public id: number;
     public name: string;
     public descrition: string;
@@ -11,5 +10,4 @@ export class Product{
     public releaseDate: Date;
     public stock: number;
     public category: Category;
-
 }
