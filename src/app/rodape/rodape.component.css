@@ -4,6 +4,7 @@
 
 .lista-rodape{
   list-style: none;
+  padding-top: 10px;
 }
 
 .lista-rodape h5{
@@ -58,3 +59,9 @@
   cursor: pointer;
 }
 
+.displayRodape{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: left;
+}

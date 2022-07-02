@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment.prod';
+import { User } from '../model/User';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +9,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
+  user: User = new User()
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  logado(){
+    let ok = false
+    if(environment.token == ''){
+      return ok
+    } else{
+      ok = true
+    }
+    return true
+  }
+
+  deslogado(){
+    let ok = true
+    if(environment.token == ''){
+      return ok
+    } else{
+      ok = false
+    }
+    return true
   }
 
 }

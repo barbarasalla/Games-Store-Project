@@ -23,6 +23,8 @@
 
   .inputWidth{
     width: 400px;
+    min-width: 200px;
+    max-width: 500px;
   }
   .boxMenu{
     flex-wrap: nowrap;
@@ -82,4 +84,30 @@
 
 .dropdown-content a{
   color: #000000;
+}
+
+.displayMenu1{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  flex-wrap: wrap;
+}
+
+.displayMenu2{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.displayMenuPrincipal{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.userLogado{
+  font-size: 16pt;
+  margin-top: 10px;
+  
 }

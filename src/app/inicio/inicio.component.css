@@ -6,3 +6,15 @@
     margin-top: 80px;
     margin-bottom: 80px;
 }
+
+.displayServico{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.displayRowServico{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

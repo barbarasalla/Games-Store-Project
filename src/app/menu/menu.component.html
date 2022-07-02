@@ -1,14 +1,12 @@
 <div class="container-fluid bgColorMenu">
   <div class="row">
-    <div
-      class="col-md-12 d-flex justify-content-end bgColorMenu text-white fs-14"
-    >
+    <div class="col-md-12 displayMenu1 text-white fs-14">
       <div>
-        <a class="nav-link" href="#"> SAC &nbsp; &nbsp;|</a>
+        <a class="nav-link" href="#">SAC</a>
       </div>
 
       <div>
-        <a class="nav-link" href="#">Meus Pedidos &nbsp; &nbsp;|</a>
+        <a class="nav-link" href="#">Meus Pedidos</a>
       </div>
 
       <div>
@@ -31,15 +29,15 @@
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </div>
 
 <div class="container-fluid bgColorMenu">
   <div class="row  py-3">
-    <div
-      class="col-md-12 d-flex justify-content-around bgColorMenu text-white fs-14"
-    >
+    <div class="col-md-12 displayMenuPrincipal bgColorMenu text-white fs-14">
+      
       <div>
         <a class="navbar-brand" href="#"
           ><img src="https://imgur.com/Z03NcLF.png" alt=""
@@ -58,36 +56,56 @@
       </div>
 
       <div class="justify-content-around">
-        <div class="nav-item row">
-          <div class="col-md-7">
-            <div>
-              <div class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-expanded="false"
+        <div class="nav-item  displayMenu2">
+          
+          <div *ngIf="deslogado()">
+            <div class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-expanded="false"
                 ><i class="fa fa-user-o" aria-hidden="true"></i>
-                LOGIN/<br />CADASTRO</a
-              >
+                LOGIN/<br/>CADASTRO
+              </a>
                 <div
                   class="dropdown-content dropdown-content-left"
-                  aria-labelledby="navbarDropdown"
-                >
-                   <a class="dropdown-item" routerLink="/entrar">Entrar</a>
-                  <a class="dropdown-item" href="#">Cadastrar</a>
+                  aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" routerLink="/entrar">Entrar</a>
+                    <a class="dropdown-item" href="#">Cadastrar</a>
                 </div>
-              </div>
             </div>
           </div>
 
-          <div class="col-md-5">
+          <div *ngIf="logado()">
+            <div class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle userLogado"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-expanded="false"
+                ><i class="fa fa-user-o" aria-hidden="true"></i>
+                Olá, <b>{{user.name}}</b> 
+              </a>
+                <div
+                  class="dropdown-content dropdown-content-left"
+                  aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item">Editar Perfil</a>
+                    <a class="dropdown-item">Sair</a>
+                </div>
+            </div>
+          </div>
+
+          <div >
             <a class="nav-link" id="carrinho" href="#"
               >0 <img src="https://imgur.com/vY6UBOk.png" alt=""
             /></a>
           </div>
+
         </div>
       </div>
     </div>
@@ -96,23 +114,10 @@
 
 <div class="container-fluid bgColorMenu2">
     <div class="container">
-        <nav
-        class="navbar navbar-expand-lg navbar-light bgColorMenu2 px-5 py-0 fs-14"
-      >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-    
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto justify-content-around col-md-12 font-weight">
+
+        <nav class="navbar navbar-expand-lg navbar-light bgColorMenu2 px-5 py-0 fs-14">
+     
+          <ul class="navbar-nav mr-auto justify-content-around col-md-12 font-weight" id="navbarSupportedContent">
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle text-white"
@@ -143,8 +148,8 @@
               <a class="nav-link" href="#">PLAYSTATION 4</a>
             </li>
           </ul>
-        </div>
-      </nav>
-    </div>
-  
+          
+        </nav>
+
+    </div>  
 </div>
