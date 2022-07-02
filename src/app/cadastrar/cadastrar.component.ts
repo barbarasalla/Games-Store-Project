@@ -29,16 +29,23 @@ export class CadastrarComponent implements OnInit {
   }
 
   cadastrar(){
-    if(this.confirmaSenha != this.user.passWord){
+
+    if(this.user.photo== ''){
+      this.user.photo = ""
+    }
+
+    if(this.confirmaSenha != this.user.password){
       this.alertasService.showAlertInfo('As senhas estão incorretas.')
-    } else{
+    } else{      
       this.user.userType = 'padrao'
+      console.log(this.user)
       this.authService.cadastrar(this.user).subscribe((resp: User)=>{
         this.user = resp
         this.alertasService.showAlertSuccess('Usuário cadastrado com sucesso!')
         this.router.navigate(['/entrar'])
       })
     }
+    
   }
 
 }

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { User } from '../model/User';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-menu',
@@ -9,11 +11,23 @@ import { User } from '../model/User';
 })
 export class MenuComponent implements OnInit {
 
+  id: number
   user: User = new User()
 
-  constructor() { }
+  constructor(
+    private authService: AuthService,
+    private router: Router
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+   
+  }
+
+
+  findByIdUser(id: number){
+    return this.authService.getByIdUsuario(this.id).subscribe((resp: User)=>{
+      this.user=resp
+    })
   }
 
   logado(){
@@ -23,7 +37,10 @@ export class MenuComponent implements OnInit {
     } else{
       ok = true
     }
-    return true
+    this.id = environment.id   
+    this.authService.refreshToken()
+    this.findByIdUser(this.id)
+    return ok
   }
 
   deslogado(){
@@ -33,7 +50,16 @@ export class MenuComponent implements OnInit {
     } else{
       ok = false
     }
-    return true
+    return ok
+  }
+
+  sair(){
+    environment.token=''
+    environment.name=''
+    environment.photo=''
+    environment.id=0
+    environment.userType=''
+    this.router.navigate(['/inicio'])
   }
 
 }

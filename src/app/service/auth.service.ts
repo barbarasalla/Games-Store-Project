@@ -24,8 +24,8 @@ export class AuthService {
     }
   }
 
-  getByIdUsuario(id:number): Observable<User>{
-    return this.http.get<User>(`https://bsmgames.herokuapp.com/user/${id}`)
+  getByIdUsuario(id: number): Observable<User>{
+    return this.http.get<User>(`https://bsmgames.herokuapp.com/user/${id}`, this.token)
   }
 
   atualizarUser(user: User): Observable<User>{
