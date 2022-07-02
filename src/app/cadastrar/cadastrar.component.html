@@ -1,0 +1,47 @@
+<div class="container-fluid bgCadastrar">
+    
+    <div class="row justify-content-center">
+        <div class="row displayCadastrar">
+            <h2 class="text-center pb-3">FAZER CADASTRO</h2>
+
+            <div class="col-md-6 displayColCadastro">
+                <form class="forms">
+                    <div class="mb-3">
+                      <label for="inputName" class="form-label">Nome</label>
+                      <input [(ngModel)]="user.name" type="name" class="form-control" id="name" aria-describedby="nameHelp" name="name" placeholder="seu nome">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email</label>
+                        <input [(ngModel)]="user.userName" type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email" placeholder="email@email.com">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword" class="form-label">Senha</label>
+                      <input (input)="confirmarSenha($event)" name="passWord" type="password" class="form-control" id="passWord" placeholder="*********">
+                    </div>
+                    
+                  </form>
+            </div>
+
+            <div class="col-md-6 displayColCadastro">
+                <form class="forms">
+                    <div class="mb-3">
+                        <label for="exampleInputConfPassword" class="form-label">Confirmar Senha</label>
+                        <input [(ngModel)]="user.passWord" name="confPassWord" type="password" class="form-control" id="confPassWord" placeholder="*********">
+                      </div>
+                    <div class="mb-3">
+                        <label for="inputName" class="form-label">Nascimento</label>
+                        <input [(ngModel)]="user.name" type="date" class="form-control" id="name" aria-describedby="nameHelp" name="name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputPhoto" class="form-label">Foto</label>
+                        <input [(ngModel)]="user.photo" type="name" class="form-control" id="photo" aria-describedby="photoHelp" name="photo" placeholder="insira url da imagem . jpg ou .png">
+                    </div>
+                    <button type="submit" class="btn btn-cadastrar py-1" (click)="cadastrar()">Cadastrar</button>
+                    <p class="criarConta">Já possui uma conta? <a routerLink="/entrar">Entrar</a>.</p>
+                  </form>
+            </div>
+        </div>
+            
+            
+        </div>
+    </div>
