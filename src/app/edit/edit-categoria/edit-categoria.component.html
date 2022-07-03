@@ -1,1 +1,14 @@
-<p>edit-categoria works!</p>
+<div class="container">
+    <div class=" col-md-12 displayEditCategoria">
+        <h2>Editar Categoria</h2>
+        <input [(ngModel)]="categoria.name"  name="name"  id="name" class="form-control" type="text"> 
+        <div class="row">
+            <div class="col-md-6">
+                <button class="btn btn-voltar" routerLink="/categoria">Voltar</button>
+            </div>
+            <div class="col-md-6">
+                <button class="btn btn-editar" (click)="editarCategoria()">Editar</button>
+            </div>  
+        </div>
+    </div>
+</div>

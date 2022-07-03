@@ -23,7 +23,7 @@ export class CategoriaService {
   }
 
   getByIdCategoria(id: number): Observable<Category>{
-    return this.http.get<Category>(`https://bsmgames.herokuapp.com/categories/${id}`)
+    return this.http.get<Category>(`https://bsmgames.herokuapp.com/categories/category/${id}`)
   }
 
   getByNameCategoria(name: string): Observable<Category[]>{
