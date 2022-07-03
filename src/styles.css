@@ -1,4 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --main-color: #000000;
+  --primary-color: #cc0606;
+  --secondary-color: #EBEBEB;
+  --cinza-primary: #D9D9D9;
+  --success-color: rgb(84, 84, 84);
+  --danger-color: #cc0606;
+  --info-color: #202020;
+}
+
 .fs-14{
     font-size: 14pt;
 }
@@ -19,7 +29,7 @@
   }
 
   .bgColorMenu2{
-    background-color: #df0a0a;
+    background-color: var(--primary-color);
   }
   
   .bgColor{

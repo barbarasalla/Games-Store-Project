@@ -13,6 +13,8 @@ import { EntrarComponent } from './entrar/entrar.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
+import { CategoriaComponent } from './categoria/categoria.component';
+import { EditCategoriaComponent } from './edit/edit-categoria/edit-categoria.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
     AlertasComponent,
     EntrarComponent,
     CadastrarComponent,
+    CategoriaComponent,
+    EditCategoriaComponent,
   ],
   imports: [
     BrowserModule,
