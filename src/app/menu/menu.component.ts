@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { Category } from '../model/Category';
 import { User } from '../model/User';
 import { AuthService } from '../service/auth.service';
+import { CategoriaService } from '../service/categoria.service';
 
 @Component({
   selector: 'app-menu',
@@ -14,15 +16,18 @@ export class MenuComponent implements OnInit {
   id: number
   user: User = new User()
 
+  categoria: Category = new Category()
+  listaCategorias: Category[]
+
   constructor(
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private categoriaService: CategoriaService
   ) { }
 
   ngOnInit() {
-   
+    this.findAllCategorias()   
   }
-
 
   findByIdUser(id: number){
     return this.authService.getByIdUsuario(this.id).subscribe((resp: User)=>{
@@ -62,4 +67,9 @@ export class MenuComponent implements OnInit {
     this.router.navigate(['/inicio'])
   }
 
+  findAllCategorias(){
+    return this.categoriaService.getAllCategoria().subscribe((resp: Category[])=>{
+      this.listaCategorias=resp
+    })
+  }
 }

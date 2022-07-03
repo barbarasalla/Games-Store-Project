@@ -13,7 +13,7 @@
                 <input [(ngModel)]="nomeCategoria" (keyup)="findByNomeCategoria()" class="form-control" placeholder="Buscar categoria pelo nome" type="text">
             </div>
            <div class="cadastrar">
-            <h4 class="text-center">Adicionar uma categoria</h4>
+            <p class="text-center tituloAddCategoria">Adicionar uma categoria</p>
             <input [(ngModel)]="categoria.name" class="form-control input-cadastrar" type="text">
             <button class="btn btn-cadastrar" (click)="cadastrarCategoria()">Cadastrar categoria</button>
            </div>
@@ -33,7 +33,7 @@
                     <tr *ngFor="let categoria of listaCategoria, index as id">
                         <th scope="row">{{id+1}}</th>
                         <td>{{categoria.name}}</td>
-                        <td><button class="btn button button-editar">Editar</button>
+                        <td><button class="btn button button-editar" [routerLink]="['/edit-categoria', categoria.id]">Editar</button>
                             <button class="btn button button-excluir">Excluir</button>
                         </td>
                       </tr>
