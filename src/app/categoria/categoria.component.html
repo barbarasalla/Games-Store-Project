@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="row justify-content-center titulo">
+        <div class="col-md-10">
+            <h2>Categorias</h2> 
+            <hr>  
+        </div>
+             
+    </div>
+    <div class="row displayCategoria">
+        
+        <div class="col-md-3 col-A">
+            <div class="filtroCategoria">
+                <input [(ngModel)]="nomeCategoria" (keyup)="findByNomeCategoria()" class="form-control" placeholder="Buscar categoria pelo nome" type="text">
+            </div>
+           <div class="cadastrar">
+            <h4 class="text-center">Adicionar uma categoria</h4>
+            <input [(ngModel)]="categoria.name" class="form-control input-cadastrar" type="text">
+            <button class="btn btn-cadastrar" (click)="cadastrarCategoria()">Cadastrar categoria</button>
+           </div>
+            
+        </div>
+
+        <div class="col-md-5">
+            <table class="table">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th class="col-md-7" scope="col">Categorias</th>
+                        <th class="col-md-4" scope="col">Ações</th>
+                      </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let categoria of listaCategoria, index as id">
+                        <th scope="row">{{id+1}}</th>
+                        <td>{{categoria.name}}</td>
+                        <td><button class="btn button button-editar">Editar</button>
+                            <button class="btn button button-excluir">Excluir</button>
+                        </td>
+                      </tr>
+                </tbody>
+              </table>
+        </div>
+
+</div>

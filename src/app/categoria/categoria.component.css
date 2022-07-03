@@ -1,0 +1,61 @@
+.displayCategoria{
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 20px 60px 20px;
+}
+
+.titulo{
+    text-align: center;
+    margin-top: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+  
+}
+
+.filtroCategoria input{
+    margin-top: 5px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    padding: 7px 20px 7px 20px;
+}
+
+.input-cadastrar{
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.cadastrar button:hover{
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
+.btn-cadastrar{
+    background-color: var(--info-color);
+    width: 100%;
+    color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.button{
+    margin: 5px;
+    padding: 3px 7px 3px 7px;
+    color: white;
+    border-radius: 10px;
+    font-size: 10pt;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+.button-editar{
+    background-color:  var(--success-color);
+}
+
+.button-excluir{
+    background-color:  var(--danger-color);
+
+}
