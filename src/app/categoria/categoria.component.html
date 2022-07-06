@@ -34,7 +34,7 @@
                         <th scope="row">{{id+1}}</th>
                         <td>{{categoria.name}}</td>
                         <td><button class="btn button button-editar" [routerLink]="['/edit-categoria', categoria.id]">Editar</button>
-                            <button class="btn button button-excluir">Excluir</button>
+                            <button class="btn button button-excluir" [routerLink]="['/delete-categoria', categoria.id]">Excluir</button>
                         </td>
                       </tr>
                 </tbody>
