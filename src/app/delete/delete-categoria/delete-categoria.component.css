@@ -1,0 +1,35 @@
+.displayCategoriaDelete{
+    background-color: var(--cinza-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0px 50px 0px;
+    padding: 50px 50px 50px 50px;
+    border-radius: 30px;
+}
+
+.displayCategoriaDelete h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+.displayCategoriaDelete p{
+    text-align: center;
+    font-size: 15pt;
+}
+
+.buttons button{
+    border-radius: 10px;
+    text-transform: uppercase;
+    margin: 10px 20px 10px 10px;
+    color: white;
+}
+
+.button-cancelar{
+    background-color: var(--success-color);
+}
+
+.button-apagar{
+    background-color: var(--danger-color);
+}
