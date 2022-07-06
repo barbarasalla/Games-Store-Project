@@ -1,0 +1,179 @@
+.displayProduto{
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 20px 60px 20px;
+}
+
+.titulo{
+    text-align: center;
+    margin-top: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+  
+}
+
+.tituloAddProduto{
+    font-size: 14pt;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.filtroProduto input{
+    margin-top: 5px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    padding: 7px 20px 7px 20px;
+}
+
+.input-cadastrar{
+    border-radius: 10px;
+}
+
+.cadastrar button:hover{
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
+.btn-cadastrar{
+    background-color: var(--info-color);
+    width: 100%;
+    color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.button-lista{
+        margin: 5px;
+        padding: 3px 7px 3px 7px;
+        color: white;
+        border-radius: 10px;
+        font-size: 10pt;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+}
+
+.button-excluir{
+    background-color: var(--danger-color) ;
+}
+
+.button-editar{
+    background-color:  var(--info-color);
+}
+
+/*MODAL*/
+.displayColCadastro{
+    padding: 0px 10px 0px 10px;
+}
+
+.displayCadastrar{
+    padding: 10px;
+}
+.modal-body input{
+ border-radius: 10px;
+}
+
+.modal-body select{
+    border-radius: 10px;
+}
+
+.button{
+    padding: 7px 20px 7px 20px;
+    color: white;
+    border-radius: 10px;
+    font-size: 11pt;
+    letter-spacing: 0.8px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.button-cancelar{
+    background-color: var(--danger-color);
+}
+
+.button-add{
+    background-color:  var(--info-color);
+}
+
+.buttonDisplay{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.descrition input{
+    height: 85px;
+    text-size-adjust:200px;
+    word-wrap: break-word;
+}
+
+.linkCategoria{
+    color: black;
+    font-weight: bold;
+}
+
+.linkCategoria:hover{
+    color: rgb(75, 72, 72);
+}
+
+/*ADICIONAR CATEGORIA*/
+
+.cadastrarCategoria{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.tituloAddCategoria{
+    font-size: 16pt;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/*MODAL DELETAR PRODUTO*/
+.displayProdutoDelete{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.displayProdutoDelete p{
+    text-align: center;
+    font-size: 15pt;
+}
+
+.buttons button{
+    border-radius: 10px;
+    text-transform: uppercase;
+    margin: 10px 20px 10px 10px;
+    color: white;
+}
+
+.button-cancelar{
+    background-color: var(--success-color);
+}
+
+.button-apagar{
+    background-color: var(--danger-color);
+}
+
+/*Atualizar*/
+
+.button-atualizar{
+    background-color: var(--info-color);
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px 0px 5px 0px;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
