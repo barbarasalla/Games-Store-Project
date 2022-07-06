@@ -14,10 +14,16 @@ export class CategoriaService {
     private http: HttpClient
   ) { }
 
-  token= {
+  token={
     headers: new HttpHeaders().set('Authorization', environment.token)
   }
 
+  refreshToken(){
+    this.token = {
+      headers: new HttpHeaders().set('Authorization', environment.token)
+    }
+  }
+  
   getAllCategoria(): Observable<Category[]>{
     return this.http.get<Category[]>('https://bsmgames.herokuapp.com/categories/all')
   }

@@ -15,6 +15,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { CategoriaComponent } from './categoria/categoria.component';
 import { EditCategoriaComponent } from './edit/edit-categoria/edit-categoria.component';
+import { DeleteCategoriaComponent } from './delete/delete-categoria/delete-categoria.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { EditCategoriaComponent } from './edit/edit-categoria/edit-categoria.com
     CadastrarComponent,
     CategoriaComponent,
     EditCategoriaComponent,
+    DeleteCategoriaComponent,
   ],
   imports: [
     BrowserModule,

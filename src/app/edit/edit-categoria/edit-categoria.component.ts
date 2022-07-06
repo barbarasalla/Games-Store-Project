@@ -24,7 +24,7 @@ export class EditCategoriaComponent implements OnInit {
 
   ngOnInit() {
     window.scroll(0,0)
-    this.authService.refreshToken()
+    this.categoriaService.refreshToken()
     let id = this.route.snapshot.params['id']
     this.findByIdCategoria(id)
   }

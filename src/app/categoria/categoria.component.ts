@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment.prod';
 import { Category } from '../model/Category';
 import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
@@ -26,7 +27,7 @@ export class CategoriaComponent implements OnInit {
     window.scroll(0,0)
     this.authService.refreshToken()
     this.findAllCategoria()
-
+    this.categoriaService.refreshToken()
   }
 
   findByNomeCategoria(){
@@ -49,7 +50,7 @@ export class CategoriaComponent implements OnInit {
     if(this.categoria.name == null){
       return this.alerta.showAlertInfo("Você precisa adicionar o nome da categoria.")
     } else{
-      return this.categoriaService.postCategoria(this.categoria).subscribe((resp: Category) =>{
+        this.categoriaService.postCategoria(this.categoria).subscribe((resp: Category) =>{
         this.categoria=resp
         this.alerta.showAlertSuccess("Categoria cadastrada com sucesso!")
         this.findAllCategoria()
