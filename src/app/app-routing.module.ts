@@ -7,6 +7,7 @@ import { EditCategoriaComponent } from './edit/edit-categoria/edit-categoria.com
 import { EntrarComponent } from './entrar/entrar.component';
 
 import { InicioComponent } from './inicio/inicio.component';
+import { ProdutoComponent } from './produto/produto.component';
 
 const routes: Routes = [
 {path: '', redirectTo: 'inicio', pathMatch:'full'},
@@ -15,7 +16,8 @@ const routes: Routes = [
 {path: 'cadastrar', component: CadastrarComponent},
 {path: 'categoria', component: CategoriaComponent},
 {path: 'edit-categoria/:id', component: EditCategoriaComponent},
-{path: 'delete-categoria/:id', component: DeleteCategoriaComponent}
+{path: 'delete-categoria/:id', component: DeleteCategoriaComponent},
+{path: 'produto', component: ProdutoComponent}
 ];
 
 @NgModule({
