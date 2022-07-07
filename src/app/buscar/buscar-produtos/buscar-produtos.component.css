@@ -1,0 +1,10 @@
+.titulo{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 30px 0px 30px 0px;
+}
+
+input{
+    border-radius: 10px;
+    width: 300px;
+}

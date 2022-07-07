@@ -90,15 +90,29 @@ export class ProdutoComponent implements OnInit {
   }
 
   findByIdProduto(){
-    this.produtoService.getByIdProduto(this.idProduto).subscribe((resp: Product)=>{
-      this.produto = resp
-    })
+   
+      this.produtoService.getByIdProduto(this.idProduto).subscribe((resp: Product)=>{
+        this.produto = resp
+      })
+    
   }
 
   findId(id: number){
     this.idProduto = id
     console.log(this.idProduto)
     this.findByIdProduto()
+  }
+
+  cacheIdProduto(){
+    this.idProduto= 0
+    this.produto.id=0
+    this.produto.name=''
+    this.produto.console=''
+    this.produto.descrition=''
+    this.produto.photo=''
+    this.produto.price=0
+    this.produto.stock=0
+    this.findId(0)
   }
 
   deletarProduto(){
