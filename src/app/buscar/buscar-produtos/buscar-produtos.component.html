@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row titulo">
+    <h1>Todos os Produtos</h1>
+  </div>
+  <div class="row">
+    <div class="col-md-12 d-flex justify-content-between">
+      <div class="col-md-4">
+        <p>Encontrados: 12 produtos</p>
+      </div>
+      <div class="col-md-4">
+        <input type="text" class="form-control" placeholder="procure pelo nome do produto"  [(ngModel)]="nomeProduto" (keyup)="findByNomeProduto()"/>
+      </div>
+      <div class="col-md-4">
+        <select name="opcaoKey" id="opcaoKey" (change)="opcaoKey($event)">
+          <option value=""selected disabled> Ordenar por: </option>
+          <option value=1>Nome</option>
+          <option value=2>Preço(crescente)</option>
+          <option value=2>Preço(decrescente)</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+          <div  *ngFor="let produto of listaProdutos">
+            <div class="card card-product text-center">
+              <img src="{{produto.photo}}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-texto">{{produto.name}}</p>
+                <p class="price-product p-0">{{produto.price}}</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </div>
+          </div>
+            
+        </div>        
+    </div>
+</div>
