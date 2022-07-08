@@ -46,10 +46,18 @@ export class BuscarProdutosComponent implements OnInit {
     let keyOp = event.target.value
 
     if(keyOp == 1 ){
-      this.key = 'nomeProduto'
+      this.key = 'name'
+      this.reverse =  false
     } else if(keyOp == 2){
-      this.key = 'valorProduto'
-    }      
+        this.key = 'name'
+        this.reverse =  true 
+    } else if(keyOp == 3){
+        this.key = 'price'
+        this.reverse =  false
+    } else if(keyOp == 4){
+        this.key = 'price'
+        this.reverse = true
+    }     
   }
 
 }
