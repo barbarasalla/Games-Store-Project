@@ -18,6 +18,7 @@ import { EditCategoriaComponent } from './edit/edit-categoria/edit-categoria.com
 import { DeleteCategoriaComponent } from './delete/delete-categoria/delete-categoria.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { BuscarProdutosComponent } from './buscar/buscar-produtos/buscar-produtos.component';
+import { OrderModule } from 'ngx-order-pipe';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { BuscarProdutosComponent } from './buscar/buscar-produtos/buscar-produto
     AppRoutingModule, 
     HttpClientModule,
     FormsModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    OrderModule
   ],
   providers: [{
     provide: LocationStrategy,

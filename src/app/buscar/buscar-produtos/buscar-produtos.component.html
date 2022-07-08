@@ -3,19 +3,20 @@
     <h1>Todos os Produtos</h1>
   </div>
   <div class="row">
-    <div class="col-md-12 d-flex justify-content-between">
-      <div class="col-md-4">
-        <p>Encontrados: 12 produtos</p>
+    <div class="col-md-12 displayFiltros">
+      <div class="totalProduto filtro">
+        <p>Encontrados: <b>{{listaProdutos.length}} </b><b *ngIf="listaProdutos.length>1">produtos</b> <b *ngIf="listaProdutos.length<=1">produto</b>.</p>
       </div>
-      <div class="col-md-4">
-        <input type="text" class="form-control" placeholder="procure pelo nome do produto"  [(ngModel)]="nomeProduto" (keyup)="findByNomeProduto()"/>
+      <div class="filtro">
+        <input type="text" class="form-control" placeholder="Procure pelo nome do produto"  [(ngModel)]="nomeProduto" (keyup)="findByNomeProduto()"/>
       </div>
-      <div class="col-md-4">
+      <div class="filtro">
         <select name="opcaoKey" id="opcaoKey" (change)="opcaoKey($event)">
           <option value=""selected disabled> Ordenar por: </option>
-          <option value=1>Nome</option>
-          <option value=2>Preço(crescente)</option>
-          <option value=2>Preço(decrescente)</option>
+          <option value=1>Nome(crescente)</option>
+          <option value=2>Nome(decrescente)</option>
+          <option value=3>Preço(crescente)</option>
+          <option value=4>Preço(decrescente)</option>
         </select>
       </div>
     </div>
@@ -24,14 +25,14 @@
 
 
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-12">
-          <div  *ngFor="let produto of listaProdutos">
+    <div class="row justify-content-center p-5">
+        <div class="col-md-12 displayProdutos">
+          <div *ngFor="let produto of listaProdutos | orderBy : key : reverse">
             <div class="card card-product text-center">
-              <img src="{{produto.photo}}" class="card-img-top" alt="...">
+              <img src="{{produto.photo}}" class="card-img" alt="...">
               <div class="card-body">
                 <p class="card-texto">{{produto.name}}</p>
-                <p class="price-product p-0">{{produto.price}}</p>
+                <p class="price-product p-0">R${{produto.price}}</p>
                 <button class="btn-comprar">Comprar</button>
               </div>
             </div>

@@ -4,7 +4,34 @@
     margin: 30px 0px 30px 0px;
 }
 
-input{
+.displayFiltros{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.filtro{
+    padding: 15px;
+}
+
+.filtro input{
     border-radius: 10px;
-    width: 300px;
+    width: 350px;
+}
+
+#opcaoKey{
+    border-radius: 20px;
+    padding: 5px 0px 5px 0px;
+    border: 2px solid rgb(180, 178, 178);
+    color: gray;
+}
+
+.totalProduto{
+    font-size: 1.5rem;
+}
+
+.displayProdutos{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }

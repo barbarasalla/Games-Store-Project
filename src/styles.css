@@ -47,6 +47,12 @@
     padding: 10px 10px 0px 10px;
     box-shadow: 1px 3px 3px rgb(134, 133, 133);
     text-align: center;
+    margin: 15px 0px 15px 0px;
+  }
+
+  .card-img{
+    width: 15rem;
+    max-height: 20rem;
   }
 
   .btn-comprar{
