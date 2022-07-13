@@ -23,13 +23,8 @@
     border-radius: 50px;
 }
 
-
 .bgColorMenu{
     background-color: #000000;
-  }
-
-  .bgColorMenu2{
-    background-color: var(--primary-color);
   }
   
   .bgColor{

@@ -116,3 +116,8 @@
   margin-top: 10px;
   
 }
+
+.containerMenu2{
+  border-top: 3px solid var(--success-color);
+  background-color: var(--primary-color)
+}

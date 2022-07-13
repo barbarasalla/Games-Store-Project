@@ -19,6 +19,9 @@ import { DeleteCategoriaComponent } from './delete/delete-categoria/delete-categ
 import { ProdutoComponent } from './produto/produto.component';
 import { BuscarProdutosComponent } from './buscar/buscar-produtos/buscar-produtos.component';
 import { OrderModule } from 'ngx-order-pipe';
+import { BuscarCategoriaComponent } from './buscar/buscar-categoria/buscar-categoria.component';
+import { ProdutoDetalheComponent } from './produto-detalhe/produto-detalhe.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +37,9 @@ import { OrderModule } from 'ngx-order-pipe';
     DeleteCategoriaComponent,
     ProdutoComponent,
     BuscarProdutosComponent,
+    BuscarCategoriaComponent,
+    ProdutoDetalheComponent,
+    CarrinhoComponent,
   ],
   imports: [
     BrowserModule,
