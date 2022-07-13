@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Category } from 'src/app/model/Category';
 import { AlertasService } from 'src/app/service/alertas.service';
 import { CategoriaService } from 'src/app/service/categoria.service';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-delete-categoria',
@@ -24,6 +25,10 @@ export class DeleteCategoriaComponent implements OnInit {
 
   ngOnInit(){
     window.scroll(0,0)
+    if(environment.userType != "adm"){
+      alert("Você precisa ser Administrador para acessar essa rota")
+      this.router.navigate(['/inicio'])
+    }
     this.categoriaService.refreshToken()
     this.categoriaId = this.route.snapshot.params['id']
     this.findByIdCategoria(this.categoriaId)

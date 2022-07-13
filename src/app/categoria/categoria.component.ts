@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Category } from '../model/Category';
 import { AlertasService } from '../service/alertas.service';
@@ -20,11 +21,16 @@ export class CategoriaComponent implements OnInit {
   constructor(
     private categoriaService: CategoriaService,
     private alerta: AlertasService, 
-    private authService: AuthService
+    private authService: AuthService,
+    private router: Router
   ) { }
 
   ngOnInit(){
     window.scroll(0,0)
+    if(environment.userType != "adm"){
+      alert("Você precisa ser Administrador para acessar essa rota")
+      this.router.navigate(['/inicio'])
+    }
     this.authService.refreshToken()
     this.findAllCategoria()
     this.categoriaService.refreshToken()

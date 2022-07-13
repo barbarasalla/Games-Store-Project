@@ -11,7 +11,7 @@
 
       <div>
         <div class="nav-item dropdown">
-          <a
+          <a *ngIf="administrador()"
             class="nav-link dropdown-toggle"
             href="#"
             id="navbarDropdown"
@@ -131,7 +131,7 @@
               </a>
               <div class="dropdown-content" aria-labelledby="navbarDropdown" >
                 <div *ngFor="let categoria of listaCategorias">
-                  <a class="dropdown-item" href="#">{{categoria.name}}</a>
+                  <a class="dropdown-item" [routerLink]="['/buscar-categoria', categoria.id]">{{categoria.name}}</a>
                 </div>
               </div>
             </li>

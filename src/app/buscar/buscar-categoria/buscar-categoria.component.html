@@ -1,1 +1,41 @@
-<p>buscar-categoria works!</p>
+<div class="container">
+    <div class="row titulo">
+      <h1>Jogos de {{categoria.name}}</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-12 displayFiltros">
+        <div class="totalProduto filtro">
+          <p>Encontrados: <b> {{ categoria.products.length }} </b><b *ngIf="categoria.products.length>1">produtos</b> <b *ngIf="categoria.products.length<=1">produto</b>.</p>
+        </div>
+       
+        <div class="filtro">
+          <select name="opcaoKey" id="opcaoKey" (change)="opcaoKey($event)">
+            <option value=""selected disabled> Ordenar por: </option>
+            <option value=1>Nome(crescente)</option>
+            <option value=2>Nome(decrescente)</option>
+            <option value=3>Preço(crescente)</option>
+            <option value=4>Preço(decrescente)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="container">
+      <div class="row justify-content-center p-5">
+          <div class="col-md-12 displayProdutos">
+            <div *ngFor="let produto of categoria.products | orderBy : key : reverse">
+              <div class="card card-product text-center">
+                <img src="{{produto.photo}}" class="card-img" alt="...">
+                <div class="card-body">
+                  <p class="card-texto">{{produto.name}}</p>
+                  <p class="price-product p-0">R${{produto.price}}</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+            </div>
+              
+          </div>        
+      </div>
+  </div>

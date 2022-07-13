@@ -58,6 +58,14 @@ export class MenuComponent implements OnInit {
     return ok
   }
 
+  administrador() {
+    let ok: boolean = false;
+      if (environment.userType == 'adm') {
+        ok = true
+      }
+    return ok
+  }
+
   sair(){
     environment.token=''
     environment.name=''

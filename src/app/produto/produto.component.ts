@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 import { Category } from '../model/Category';
 import { Product } from '../model/Product';
 import { AlertasService } from '../service/alertas.service';
@@ -29,6 +30,10 @@ export class ProdutoComponent implements OnInit {
     private router: Router
   ) { }
   ngOnInit(){
+    if(environment.userType != "adm"){
+      alert("Você precisa ser Administrador para acessar essa rota")
+      this.router.navigate(['/inicio'])
+    }
     this.produtoService.refreshToken()
     this.findAllCategoria()
     this.findAllProdutos()
