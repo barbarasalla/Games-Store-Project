@@ -39,6 +39,7 @@
 
   .card-product{
     width: 20rem;
+    max-height: 35rem;
     padding: 10px 10px 0px 10px;
     box-shadow: 1px 3px 3px rgb(134, 133, 133);
     text-align: center;
@@ -47,6 +48,7 @@
 
   .card-img{
     width: 15rem;
+    height: 20rem;
     max-height: 20rem;
   }
 
@@ -55,17 +57,23 @@
     background-color: #000000;
     color: white;
     width: 270px;
-    height: 40px;
+    height: 30px;
     border-radius: 10px;
     border: transparent;
     font-weight: bold;
-    font-size: 16pt;
+    font-size: 14pt;
+    text-transform: uppercase;
+    letter-spacing: 1px
   }
 
-  .btn-comprar
+  .btn-comprar:hover{
+    transform: scale(1.02);
+    transition: 0.3s;
+  }
 
   .card-texto{
     font-size: 16pt;
+    margin: 0;
   }
 
   .price-product-old{
@@ -75,9 +83,15 @@
   }
 
   .price-product{
+    margin-top: 20px;
     font-size: 1.3rem;
     font-weight:bolder;
-    color: rgb(125, 133, 133);
+    color: rgb(67, 71, 71);
+  }
+
+  .console-produto{
+    padding: 0;
+    margin: 0;
   }
 
   /*---------------------*/
