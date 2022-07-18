@@ -25,7 +25,7 @@ const routes: Routes = [
 {path: 'buscar-produtos', component: BuscarProdutosComponent},
 {path: 'buscar-categoria/:id', component: BuscarCategoriaComponent},
 {path: 'carrinho', component: CarrinhoComponent},
-{path: 'produto-detalhe', component: ProdutoDetalheComponent}
+{path: 'produto-detalhe/:id', component: ProdutoDetalheComponent}
 ];
 
 @NgModule({
