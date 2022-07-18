@@ -33,11 +33,13 @@
               <div class="card-body">
                 <p class="card-texto">{{produto.name}}</p>
                 <p class="price-product p-0">R${{produto.price}}</p>
-                <button class="btn-comprar">Comprar</button>
+                <div class="button-produto">
+                  <button class="btn-verMais" [routerLink]="['/produto-detalhe', produto.id]">Ver Mais</button>
+                  <button class="btn-comprar">Comprar</button>
+                </div>                
               </div>
             </div>
-          </div>
-            
+          </div>            
         </div>        
     </div>
 </div>

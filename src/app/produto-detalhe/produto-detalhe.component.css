@@ -1,7 +1,13 @@
 .displayRowProduto{
     display: flex;
     justify-content: space-around;
-    margin: 30px 0px 30px 0px;
+    margin: 80px 100px 20px 100px;
+}
+
+.img-produto{
+    max-width: 350px;
+    height: 400px;
+    max-height: 400px;
 }
 
 .displayInfo{
@@ -22,4 +28,34 @@
 
 .parcelaInfo{
     font-size: 1rem;
+}
+
+.displayDetalhe{
+    margin: 50px;
+    background-color: var(--cinza-primary);
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    border-radius: 30px;
+}
+
+.displayDetalhe ul{
+    margin-left: 20px;
+}
+
+.button button{
+    border-radius: 10px;
+    text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: 1px;
+
+}
+
+.button button:hover{
+    transform: scale(1.02);
+    transition: 0.2s;
+  }
+
+.buttonComprar{
+    background-color: var(--primary-color);
 }

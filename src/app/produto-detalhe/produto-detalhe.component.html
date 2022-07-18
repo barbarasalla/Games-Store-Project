@@ -1,15 +1,31 @@
 <div class="container">
     <div class="row displayRowProduto">
-        <div class="col-md-6">
-            <img src="{{produto.photo}}" alt="">
+        <div class="col-md-5">
+            <img class="img-produto" src="{{produto.photo}}" alt="">
         </div>
-        <div class="col-md-6 displayInfo">
-            <h1>Nome Produto</h1>
-            <h5>Playstation 5</h5>
+        <div class="col-md-5 displayInfo">
+            <h1>{{produto.name}}</h1>
+            <h5>{{produto.console}}</h5>
+            <div><p *ngIf="produto.stock>0">Produto disponível</p><p *ngIf="produto.stock==0">Produto indisponível</p></div>
             <div class="infoPrice">
-                <p class="price">R$ 50,00 à vista</p>
-                <p class="parcelaInfo">ou 55,00 em até 12x s/ juros</p>
+                <p class="price">{{produto.price}} à vista</p>
+                <p class="parcelaInfo">ou {{produto.price+5}} em até 12x s/ juros</p>
+            </div>
+            <div class="button">
+                <button class="btn buttonComprar">Adicionar ao Carrinho</button>
             </div>           
         </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row displayDetalhe">
+        <h4 class="mb-3">Especificações:</h4>
+        <ul>
+            <li><b>Plataforma</b>: {{produto.console}}.</li>
+            <li><b>Formato</b>: Mídia Física.</li>
+            <li><b>Data de Lançamento</b>: {{produto.releaseDate}}.</li>
+            <li><b>Descrição</b>: {{produto.descrition}}</li>
+        </ul>
     </div>
 </div>

@@ -91,9 +91,9 @@
             <div class="displayCarrosel">
               <div *ngFor="let produto of listaProdutos.slice(0,3)">
                 <div class="card card-product-inicio text-center">
-                  <a  href=""><img src={{produto.photo}} class="card-img-inicio" height="350px" alt="..."></a>
+                  <a  [routerLink]="['/produto-detalhe', produto.id]"><img src={{produto.photo}} class="card-img-inicio" height="350px" alt="..."></a>
                   <div class="card-body box-inicio">
-                    <p class="card-texto-inicio"><a href="">{{produto.name}}</a></p>
+                    <p class="card-texto-inicio"><a [routerLink]="['/produto-detalhe', produto.id]">{{produto.name}}</a></p>
                   </div>
                 </div>
             </div>
@@ -105,9 +105,9 @@
             <div class="displayCarrosel">
               <div *ngFor="let produto of listaProdutos.slice(0,3)">
                 <div class="card card-product-inicio text-center">
-                  <a  href=""><img src={{produto.photo}} class="card-img-inicio" height="350px" alt="..."></a>
+                  <a [routerLink]="['/produto-detalhe', produto.id]"><img src={{produto.photo}} class="card-img-inicio" height="350px" alt="..."></a>
                   <div class="card-body box-inicio">
-                    <p class="card-texto-inicio"><a href="">{{produto.name}}</a></p>
+                    <p class="card-texto-inicio"><a [routerLink]="['/produto-detalhe', produto.id]">{{produto.name}}</a></p>
                   </div>
                 </div>
             </div>

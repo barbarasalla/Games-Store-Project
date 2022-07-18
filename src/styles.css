@@ -52,21 +52,28 @@
     max-height: 20rem;
   }
 
-  .btn-comprar{
-    margin-top: 10px;
-    background-color: #000000;
+  .button-produto button{
+    margin-bottom: 10px;
     color: white;
     width: 270px;
-    height: 30px;
+    height: 27px;
     border-radius: 10px;
     border: transparent;
     font-weight: bold;
-    font-size: 14pt;
+    font-size: 12pt;
     text-transform: uppercase;
-    letter-spacing: 1px
+    letter-spacing: 1px;
   }
 
-  .btn-comprar:hover{
+  .btn-comprar{
+    background-color: var(--info-color);
+  }
+
+  .btn-verMais{
+    background-color: var(--danger-color);
+  }
+
+  .button-produto button:hover{
     transform: scale(1.02);
     transition: 0.3s;
   }

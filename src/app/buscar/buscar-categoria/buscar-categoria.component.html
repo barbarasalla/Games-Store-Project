@@ -5,7 +5,7 @@
     <div class="row">
       <div class="col-md-12 displayFiltros">
         <div class="totalProduto filtro">
-          <p>Encontrados: <b> {{ categoria.products.length }} </b><b *ngIf="categoria.products.length>1">produtos</b> <b *ngIf="categoria.products.length<=1">produto</b>.</p>
+          <!-- <p>Encontrados: <b> {{ categoria.products.length }} </b><b *ngIf="categoria.products.length>1">produtos</b> <b *ngIf="categoria.products.length<=1">produto</b>.</p> -->
         </div>
        
         <div class="filtro">
@@ -24,18 +24,20 @@
   
   <div class="container">
       <div class="row justify-content-center p-5">
-          <div class="col-md-12 displayProdutos">
-            <div *ngFor="let produto of categoria.products | orderBy : key : reverse">
-              <div class="card card-product text-center">
-                <img src="{{produto.photo}}" class="card-img" alt="...">
-                <div class="card-body">
-                  <p class="card-texto">{{produto.name}}</p>
-                  <p class="price-product p-0">R${{produto.price}}</p>
+        <div class="col-md-12 displayProdutos">
+          <div *ngFor="let produto of categoria.products| orderBy : key : reverse">
+            <div class="card card-product text-center">
+              <img src="{{produto.photo}}" class="card-img" alt="...">
+              <div class="card-body">
+                <p class="card-texto">{{produto.name}}</p>
+                <p class="price-product p-0">R${{produto.price}}</p>
+                <div class="button-produto">
+                  <button class="btn-verMais" [routerLink]="['/produto-detalhe', produto.id]">Ver Mais</button>
                   <button class="btn-comprar">Comprar</button>
-                </div>
+                </div>                
               </div>
             </div>
-              
-          </div>        
+          </div>            
+        </div>        
       </div>
   </div>
