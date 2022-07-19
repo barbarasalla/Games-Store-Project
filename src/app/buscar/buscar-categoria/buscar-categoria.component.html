@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row titulo">
-      <h1>Jogos de {{categoria.name}}</h1>
+      <h1>Jogos de {{nomeCategoria}}</h1>
     </div>
     <div class="row">
       <div class="col-md-12 displayFiltros">
@@ -23,20 +23,25 @@
   
   
   <div class="container">
-      <div class="row justify-content-center p-5">
+      <div class="row justify-content-center p-4">
         <div class="col-md-12 displayProdutos">
-          <div *ngFor="let produto of categoria.products| orderBy : key : reverse">
-            <div class="card card-product text-center">
-              <img src="{{produto.photo}}" class="card-img" alt="...">
-              <div class="card-body">
-                <p class="card-texto">{{produto.name}}</p>
-                <p class="price-product p-0">R${{produto.price}}</p>
-                <div class="button-produto">
-                  <button class="btn-verMais" [routerLink]="['/produto-detalhe', produto.id]">Ver Mais</button>
-                  <button class="btn-comprar">Comprar</button>
-                </div>                
+          <div *ngFor="let produto of listaCategoria.product | orderBy : key : reverse"> 
+            <div>
+              <div class="card card-product text-center">
+                <img src="{{produto.photo}}" class="card-img" alt="...">
+                <div class="card-body">
+                  <p class="card-texto">{{produto.name}}</p>
+                  <p class="price-product p-0">R${{produto.price}}</p>
+                  <div class="button-produto">
+                    <button class="btn-verMais" [routerLink]="['/produto-detalhe', produto.id]">Ver Mais</button>
+                    <button class="btn-comprar">Comprar</button>
+                  </div>                
+                </div>
               </div>
+
             </div>
+              
+
           </div>            
         </div>        
       </div>

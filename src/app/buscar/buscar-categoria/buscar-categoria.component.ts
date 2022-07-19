@@ -12,11 +12,12 @@ import { ProdutoService } from 'src/app/service/produto.service';
 })
 export class BuscarCategoriaComponent implements OnInit {
 
+  nomeCategoria: string
+
   produto: Product = new Product()
-  listaProdutos: Product[]
-  nomeProduto: string
 
   categoria: Category = new Category()
+  listaCategoria: Category
 
   key: string
   reverse: boolean
@@ -29,24 +30,15 @@ export class BuscarCategoriaComponent implements OnInit {
 
   ngOnInit(){
     window.scroll(0,0)
-    
+    this.route.params.subscribe(({ id }) => this.findByIdCategoria(id));
     let id= this.route.snapshot.params['id']
     this.findByIdCategoria(id)
-    this.findAllProdutos()
-  }
-
-  findAllProdutos(){
-    return this.produtoService.getAllProduto().subscribe((resp: Product[])=>{
-      this.listaProdutos = resp
-      let id= this.route.snapshot.params['id']
-      this.findByIdCategoria(id)
-    })
   }
   
   findByIdCategoria(id: number){
     this.categoriaService.getByIdCategoria(id).subscribe((resp: Category) =>{
-      this.categoria= resp
-      this.findAllProdutos()
+      this.listaCategoria= resp
+      this.nomeCategoria = this.listaCategoria.name
     })
   }
 
