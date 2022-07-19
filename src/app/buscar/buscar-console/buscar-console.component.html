@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12 displayFiltros">
+        <div class="row filtro">
+            <h3>Jogos encontrados em <b>{{console}}</b></h3>
+        </div>
+        <div class="filtro">
+          <select name="opcaoKey" id="opcaoKey" (change)="opcaoKey($event)">
+            <option value=""selected disabled> Ordenar por: </option>
+            <option value=1>Nome(crescente)</option>
+            <option value=2>Nome(decrescente)</option>
+            <option value=3>Preço(crescente)</option>
+            <option value=4>Preço(decrescente)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="container">
+      <div class="row justify-content-center displayProdutos">
+        <div class="col-md-12">
+            <div *ngFor="let produto of listaProdutos | orderBy : key : reverse"> 
+              <div *ngIf="produto.console==this.console">
+                <div class="card card-product text-center">
+                  <img src="{{produto.photo}}" class="card-img" alt="...">
+                  <div class="card-body">
+                    <p class="card-texto">{{produto.name}}</p>
+                    <p class="price-product p-0">R${{produto.price}}</p>
+                    <div class="button-produto">
+                      <button class="btn-verMais" [routerLink]="['/produto-detalhe', produto.id]">Ver Mais</button>
+                      <button class="btn-comprar">Comprar</button>
+                    </div>                
+                  </div>
+                </div>
+              </div>
+            </div>            
+          </div>        
+      </div>
+  </div>

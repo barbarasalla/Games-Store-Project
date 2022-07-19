@@ -89,7 +89,7 @@
       <div class="carousel-inner p-5">
           <div class="carousel-item active">
             <div class="displayCarrosel">
-              <div *ngFor="let produto of listaProdutos">
+              <div *ngFor="let produto of listaProdutos.slice(0,2)">
                 <div class="card card-product-inicio text-center">
                   <a  [routerLink]="['/produto-detalhe', produto.id]"><img src={{produto.photo}} class="card-img-inicio" height="350px" alt="..."></a>
                   <div class="card-body box-inicio">
@@ -103,7 +103,7 @@
 
           <div class="carousel-item">
             <div class="displayCarrosel">
-              <div *ngFor="let produto of listaProdutos">
+              <div *ngFor="let produto of listaProdutos.slice(2,3)">
                 <div class="card card-product-inicio text-center">
                   <a [routerLink]="['/produto-detalhe', produto.id]"><img src={{produto.photo}} class="card-img-inicio" height="350px" alt="..."></a>
                   <div class="card-body box-inicio">

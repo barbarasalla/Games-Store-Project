@@ -22,6 +22,7 @@ import { OrderModule } from 'ngx-order-pipe';
 import { BuscarCategoriaComponent } from './buscar/buscar-categoria/buscar-categoria.component';
 import { ProdutoDetalheComponent } from './produto-detalhe/produto-detalhe.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { BuscarConsoleComponent } from './buscar/buscar-console/buscar-console.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { CarrinhoComponent } from './carrinho/carrinho.component';
     BuscarCategoriaComponent,
     ProdutoDetalheComponent,
     CarrinhoComponent,
+    BuscarConsoleComponent,
   ],
   imports: [
     BrowserModule,
