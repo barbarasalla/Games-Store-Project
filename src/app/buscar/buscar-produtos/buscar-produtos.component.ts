@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/model/Product';
+import { CarrinhoService } from 'src/app/service/carrinho.service';
 import { ProdutoService } from 'src/app/service/produto.service';
 
 @Component({
@@ -17,7 +18,8 @@ export class BuscarProdutosComponent implements OnInit {
   reverse: boolean
 
   constructor(
-    private produtoService: ProdutoService
+    private produtoService: ProdutoService,
+    private carrinhoService: CarrinhoService
   ) { }
 
   ngOnInit() {
@@ -58,6 +60,18 @@ export class BuscarProdutosComponent implements OnInit {
         this.key = 'price'
         this.reverse = true
     }     
+  }
+
+  getProdById(id: number){
+    this.produtoService.getByIdProduto(id).subscribe((resp: Product) =>{
+      this.produto = resp;
+      this.addProduto()
+    })
+  }
+
+  addProduto(){
+    this.carrinhoService.addProduto(this.produto)
+    console.log(this.carrinhoService.produtos)
   }
 
 }
