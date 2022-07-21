@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment.prod';
 import { Category } from '../model/Category';
 import { User } from '../model/User';
 import { AuthService } from '../service/auth.service';
+import { CarrinhoService } from '../service/carrinho.service';
 import { CategoriaService } from '../service/categoria.service';
 
 @Component({
@@ -19,10 +20,13 @@ export class MenuComponent implements OnInit {
   categoria: Category = new Category()
   listaCategorias: Category[]
 
+  quantCarrinho = this.carrinhoService.listarProdutos()
+
   constructor(
     private authService: AuthService,
     private router: Router,
-    private categoriaService: CategoriaService
+    private categoriaService: CategoriaService,
+    private carrinhoService: CarrinhoService
   ) { }
 
   ngOnInit() {

@@ -1,14 +1,53 @@
-<div class="container">
-    <div class="row" *ngFor="let produto of listaProdutos">
-        <div class="col-md-4">
-            <img src="{{produto.photo}}" alt="">
+<div class="container p-4">
+    <div class="row displayProdutos p-2" *ngFor="let produto of listaProdutos">
+        <div class="col-md-2 displayDelete">
+            <button class="btn deletarProduto" (click)="deletarProdutos()">X</button>
         </div>
-        <div class="col-md-3">
-            
-        </div>
-        <div class="col-md-3">
-            <p>Valor: {{produto.price}}</p>
+        <div class="col-md-6 ">
+            <div class="row displayInfoProduto">
+                <div class="col-md-5">
+                    <img src="{{produto.photo}}" alt="">
+                </div>
+                <div class="col-md-5">
+                    <p class="titulo">{{produto.name}}</p>
+                    <p class="console">{{produto.console}}</p>
+                </div>             
+            </div>           
         </div>
 
+        <!-- <div class="col-md-3 displayQuant">
+            <button class="btn" (click)="menosProdutos()">-</button>
+            <input class="inputQuant" type="text" name="quant" value="{{quant}}">
+            <button class="btn" (click)="maisProdutos()">+</button>
+        </div> -->
+
+        <div class="col-md-3 displayPrice">
+            <p class="px-3">Valor: </p>
+            <p><b> {{produto.price | currency: "BRL"}} </b></p>
+        </div>
+        <hr class="m-4">
+    </div>
+    <div class="row ">
+        <div class="col-md-12 displaySubtotal">
+            <p><b>Subtotal:</b> {{total() | currency: "BRL"}}</p>
+        </div>       
+    </div>
+</div>
+
+<div class="container py-5">
+    <div class="row ">
+<!--    
+                <div class="col-md-6">
+                    <h4>Informações de Entrega:</h4>
+                </div> -->
+        
+                <div class="col-md-12 displayTotal">
+                   <h3>Detalhes da Compra:</h3>
+                   <p><b>Descontos:</b> R$ 0,00</p> 
+                   <p><b>Total:</b> {{total() | currency: "BRL"}}</p>  
+                   <button class="btn buttonFinalizar" (click)="finalizarCompra()">Finalizar Compra</button>                  
+                </div>
+
+       
     </div>
 </div>
