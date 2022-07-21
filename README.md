@@ -21,4 +21,4 @@ BACK-END:
 </ul>
 
 ## LINK DEPLOY APLICAÇÃO: 
-<b><a href="https://duke-games-store.netlify.app" target="_blank">https://duke-games-store.netlify.app</a></b>
+<b><a href="https://duke-games-store.netlify.app" target="_blank">Duke Games Store</a></b>
