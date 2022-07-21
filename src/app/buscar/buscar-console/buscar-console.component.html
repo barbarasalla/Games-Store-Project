@@ -30,7 +30,7 @@
                     <p class="price-product p-0">R${{produto.price}}</p>
                     <div class="button-produto">
                       <button class="btn-verMais" [routerLink]="['/produto-detalhe', produto.id]">Ver Mais</button>
-                      <button class="btn-comprar">Comprar</button>
+                      <button class="btn-comprar" (click)='getProdById(produto.id)' routerLink="/carrinho">Comprar</button>
                     </div>                
                   </div>
                 </div>

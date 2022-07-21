@@ -21,3 +21,4 @@ BACK-END:
 </ul>
 
 ## LINK DEPLOY APLICAÇÃO: 
+<b> https://duke-games-store.netlify.app </b>
