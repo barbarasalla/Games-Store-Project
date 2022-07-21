@@ -12,7 +12,7 @@
                 <p class="parcelaInfo">ou {{produto.price+5}} em até 12x s/ juros</p>
             </div>
             <div class="button">
-                <button class="btn buttonComprar">Adicionar ao Carrinho</button>
+                <button class="btn buttonComprar" (click)='getProdById(produto.id)' routerLink="/carrinho">Adicionar ao Carrinho</button>
             </div>           
         </div>
     </div>

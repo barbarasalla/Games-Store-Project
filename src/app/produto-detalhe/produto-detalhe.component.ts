@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from '../model/Product';
+import { CarrinhoService } from '../service/carrinho.service';
 import { ProdutoService } from '../service/produto.service';
 
 @Component({
@@ -14,7 +15,8 @@ export class ProdutoDetalheComponent implements OnInit {
 
   constructor(
     private produtoService: ProdutoService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private carrinhoService: CarrinhoService
   ) { }
 
   ngOnInit(){
@@ -27,6 +29,18 @@ export class ProdutoDetalheComponent implements OnInit {
     this.produtoService.getByIdProduto(id).subscribe((resp: Product)=>{
       this.produto = resp
     })
+  }
+
+  getProdById(id: number){
+    this.produtoService.getByIdProduto(id).subscribe((resp: Product) =>{
+      this.produto = resp;
+      this.addProduto()
+    })
+  }
+
+  addProduto(){
+    this.carrinhoService.addProduto(this.produto)
+    console.log(this.carrinhoService.produtos)
   }
 
 }

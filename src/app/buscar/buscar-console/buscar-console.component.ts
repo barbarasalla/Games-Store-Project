@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from 'src/app/model/Product';
+import { CarrinhoService } from 'src/app/service/carrinho.service';
 import { ProdutoService } from 'src/app/service/produto.service';
 
 @Component({
@@ -22,7 +23,8 @@ export class BuscarConsoleComponent implements OnInit {
 
   constructor(
     private produtoService: ProdutoService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private carrinhoService: CarrinhoService
   ) { }
 
   ngOnInit() {
@@ -85,5 +87,17 @@ export class BuscarConsoleComponent implements OnInit {
         this.key = 'price'
         this.reverse = true
     }     
+  }
+
+  getProdById(id: number){
+    this.produtoService.getByIdProduto(id).subscribe((resp: Product) =>{
+      this.produto = resp;
+      this.addProduto()
+    })
+  }
+
+  addProduto(){
+    this.carrinhoService.addProduto(this.produto)
+    console.log(this.carrinhoService.produtos)
   }
 }
